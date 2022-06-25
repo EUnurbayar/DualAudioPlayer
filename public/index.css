@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    grid-template-columns: 25em 25em;
+}
+
+.title_h3{
+    margin-left: 2rem;
+}
+figcaption{
+    margin: 2rem;
+}
+figure{
+    margin: 2rem;
+}
