@@ -1,3 +1,5 @@
+console.log("hello audio player");
+
 window.onload = function(){
 
     let myAudio1 = document.getElementById('player1');
