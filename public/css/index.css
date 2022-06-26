@@ -1,7 +1,18 @@
+/*
+@author; Enkhtsetseg Unurbayar
+@small project: Dual Audio Player
+index.css
+*/
+.outer-container{
+    content: normal;
+}
+
+
 .container{
     display: grid;
     grid-template-columns: 25em 25em;
 }
+
 
 .title_h3{
     margin-left: 2rem;
