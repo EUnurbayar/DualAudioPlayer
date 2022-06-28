@@ -25,35 +25,42 @@ const audio2 = document.getElementById('audio2');
 
 
 // Song titles
-const songs = ['hey', 'summer', 'ukulele'];
+const songs1 = ['hey', 'summer', 'ukulele'];
+const songs2 = ['summer', 'hey', 'ukulele'];
+
 
 // Keep track of song
-let songIndex = 2;
+let songIndex1 = 2;
+let songIdnex2 = 1;
 
 // Initially load song details into DOM
-loadSong(songs[songIndex]);
+loadSong(songs1[songIndex1], songs2[songIdnex2]);
 
 // Update song details
-function loadSong(song) {
-  // title.innerText = song;
-  audio1.src = `music/${song}.mp3`;
-  audio2.src = `music/${song}.mp3`;
+function loadSong(song1, song2) {
+  title1.innerText = song1;
+  audio1.src = `music/${song1}.mp3`;
+  audio2.src = `music/${song2}.mp3`;
 }
 
 // Play song
-function playSong() {
-  musicContainer1.classList.add('play1');
-  console.log("clicked1")
-  playBtn1.querySelector('i.fas').classList.remove('fa-play');
-  playBtn1.querySelector('i.fas').classList.add('fa-pause');
+function playSong(playerId) {
+  let player = document.getElementById(playerId)
+  let audio = player.querySelector('audio');
+  let playBtn = player.querySelector('.play-btn');
+  
+  player.classList.add(player.find);
+  console.log("clicked: " + playerId)
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
 
-  musicContainer2.classList.add('play2');
-  console.log("clicked2");
-  playBtn2.querySelector('#p2').classList.remove('fa-play');
-  playBtn2.querySelector('#p2').classList.add('fa-pause');
+  //musicContainer2.classList.add('play2');
+  //console.log("clicked2");
+  //playBtn2.querySelector('#p2').classList.remove('fa-play');
+  //playBtn2.querySelector('#p2').classList.add('fa-pause');
 
-  audio1.play();
-  audio2.play();
+  audio.play();
+  //audio2.play();
 }
 
 // Pause song
@@ -102,9 +109,9 @@ playBtn1.addEventListener('click', () => {
   const isPlaying1 = musicContainer1.classList.contains('play1');
 
   if (isPlaying1) {
-    pauseSong();
+    pauseSong("music-container1");
   } else {
-    playSong();
+    playSong("music-container1");
   }
 
 
@@ -114,9 +121,9 @@ playBtn2.addEventListener('click', () => {
 	const isPlaying2 = musicContainer2.classList.contains('play2');
   
 	if (isPlaying2) {
-	  pauseSong();
+	  pauseSong("music-container");
 	} else {
-	  playSong();
+	  playSong("music-container2");
 	}
   
   
