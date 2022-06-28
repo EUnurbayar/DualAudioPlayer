@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dual Audio Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/cyborg/bootstrap.min.css" integrity="sha512-/in5IWTUhb7wOUd6iHotlyrLrZ7+2utJJR8ySzSxeeOMJ9fanjCr4fmyWzDW/ziw56shUNTVClBMWZaA677VhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/index.css">
-    <script src="./js/index.js"></script>
+    <!-- <script  defer src="./js/index.js"></script> -->
+    <script defer src="./index.js"></script>
 </head>
 <body>
     <div class="outer-container">
@@ -19,41 +21,55 @@
               </button>
             </div>
         </nav>
-        <main>
-            <div class="title_h3">
-                <h3>Dual Audio Player</h3>
-            </div>
-           <div class="container">
-                <div class="">
-                    <section class="player1-sec">
-                        <div class="one">
-                            <figure>
-                                <figcaption>Player 1</figcaption>
-                                <audio id="player1" 
-                                       src="./music/The Grand Chopin Nocturne - Sebastian Pangal.mp3"
-                                       preload="auto"
-                                       controls  >
-                                </audio>
-                            </figure>
-                        </div>
-                    </section>
+        <div class="container">
+            <main>
+                <div class="title_h3">
+                    <h3>Dual Audio Player</h3>
                 </div>
-                <div class="">
-                    <section class="player2-sec">
-                        <div class="two">
-                            <figure>
-                                <figcaption>Player 2</figcaption>
-                                <audio id="player2" 
-                                       src="./music/Arise - Roman P.mp3"
-                                       preload="auto"
-                                       controls>
-                                </audio>
-                            </figure>
+                <div class="players-container">
+                    <div id="music-container1">
+                        <div class="music-info1">
+                            <h4 id="title1">Chopin</h4>
                         </div>
-                    </section>
+                        <audio src="./music/hey.mp3" id="audio1"></audio>
+                        <div class="img-container">
+                            <img src="./images/music.png" alt="colorful-misuc img" id="cover">
+                        </div>
+                        <div class="navigation">
+                            <button id="prev1" class="action-btn">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <button id="play1" class="action-btn action-btn-big">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button id="next1" class="action-btn">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="music-container2">
+                        <div class="music-info2">
+                            <h4 id="title2">Chopin</h4>
+                        </div>
+                        <audio src="./music/hey.mp3" id="audio2"></audio>
+                        <div class="img-container">
+                            <img src="./images/music.png" alt="colorful-misuc img" id="cover2">
+                        </div>
+                        <div class="navigation2">
+                            <button id="prev2" class="action-btn">
+                                <i class=" fas fa-backward" id="p2"></i>
+                            </button>
+                            <button id="play2" class="action-btn action-btn-big">
+                                <i class="fas fa-play" id="p2"></i>
+                            </button>
+                            <button id="next" class="action-btn">
+                                <i class="fas fa-forward" id="p2"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-           </div>
-        </main>
+            </main>
+        </div>
     </div>
 </body>
 </html>
