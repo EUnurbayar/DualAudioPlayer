@@ -1,4 +1,7 @@
-console.log("hello index.js");
+/**
+ * inded.js
+ */
+console.log("Hello index.js");
 
 const musicContainer1 = document.getElementById('music-container1');
 const playBtn1 = document.getElementById('play1');
@@ -17,8 +20,8 @@ const prevBtn2 = document.getElementById('prev2');
 const nextBtn2 = document.getElementById('next2');
 
 const audio2 = document.getElementById('audio2');
-const title2 = document.getElementById('title2');
-const cover2 = document.getElementById('cover2');
+// const title2 = document.getElementById('title2');
+// const cover2 = document.getElementById('cover2');
 
 
 // Song titles
@@ -32,7 +35,7 @@ loadSong(songs[songIndex]);
 
 // Update song details
 function loadSong(song) {
-//   title.innerText = song;
+  // title.innerText = song;
   audio1.src = `music/${song}.mp3`;
   audio2.src = `music/${song}.mp3`;
 }
@@ -40,31 +43,32 @@ function loadSong(song) {
 // Play song
 function playSong() {
   musicContainer1.classList.add('play1');
+  console.log("clicked1")
   playBtn1.querySelector('i.fas').classList.remove('fa-play');
   playBtn1.querySelector('i.fas').classList.add('fa-pause');
 
   musicContainer2.classList.add('play2');
-//   playBtn2.querySelector('i.#p2').classList.remove('fa-play');
-//   playBtn2.querySelector('i.#p2').classList.add('fa-pause');
+  console.log("clicked2");
+  playBtn2.querySelector('#p2').classList.remove('fa-play');
+  playBtn2.querySelector('#p2').classList.add('fa-pause');
 
   audio1.play();
-
   audio2.play();
 }
 
 // Pause song
 function pauseSong() {
-  musicContainer1.classList.remove('play');
+  musicContainer1.classList.remove('play1');
   playBtn1.querySelector('i.fas').classList.add('fa-play');
   playBtn1.querySelector('i.fas').classList.remove('fa-pause');
 
+
+  musicContainer2.classList.remove('play2');
+  playBtn2.querySelector('#p2').classList.add('fa-play');
+  playBtn2.querySelector('#p2').classList.remove('fa-pause');
+
   audio1.pause();
-
-//   musicContainer2.classList.remove('play');
-//   playBtn2.querySelector('i.#p2').classList.add('fa-play');
-//   playBtn2.querySelector('i.#p2').classList.remove('fa-pause');
-
-//   audio2.pause();
+  audio2.pause();
 }
 
 // Previous song
@@ -103,27 +107,20 @@ playBtn1.addEventListener('click', () => {
     playSong();
   }
 
-  const isPlaying2 = musicContainer1.classList.contains('play2');
-
-  if (isPlaying2) {
-    pauseSong();
-  } else {
-    playSong();
-  }
 
 });
 
-// playBtn2.addEventListener('click', () => {
-// 	const isPlaying2 = musicContainer2.classList.contains('play2');
+playBtn2.addEventListener('click', () => {
+	const isPlaying2 = musicContainer2.classList.contains('play2');
   
-// 	if (isPlaying2) {
-// 	  pauseSong();
-// 	} else {
-// 	  playSong();
-// 	}
+	if (isPlaying2) {
+	  pauseSong();
+	} else {
+	  playSong();
+	}
   
   
-//   });
+  });
 
 // Change song
 prevBtn1.addEventListener('click', prevSong);
