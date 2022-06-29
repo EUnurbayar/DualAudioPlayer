@@ -38,7 +38,7 @@ loadSong(songs1[songIndex1], songs2[songIdnex2]);
 
 // Update song details
 function loadSong(song1, song2) {
-  title1.innerText = song1;
+  
   audio1.src = `music/${song1}.mp3`;
   audio2.src = `music/${song2}.mp3`;
 }
