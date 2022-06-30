@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/cyborg/bootstrap.min.css" integrity="sha512-/in5IWTUhb7wOUd6iHotlyrLrZ7+2utJJR8ySzSxeeOMJ9fanjCr4fmyWzDW/ziw56shUNTVClBMWZaA677VhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/index.css">
-    <script  defer src="./index.js"></script>
-
+    <!-- <script  defer src="./js/index.js"></script> -->
+    <script defer src="./index.js"></script>
+</head>
 <body>
     <div class="outer-container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,31 +26,61 @@
                 <div class="title_h3">
                     <h3>Dual Audio Player</h3>
                 </div>
-                <div class="players-container" id="players">
-                        <div class="" id="music-container1" >
-                            <audio id="audio1" class="audio1" loop controls>
-                                <source id="song1 audio1" src="./music/music-player_music_summer.mp3" type="audio/mpeg">
-                            </audio>
+                <div class="players-container">
+                    <div class="all-play">
+                        <div id="music-container1" >
+                            <audio src="./music/hey.mp3" id="audio1" class="audio" controls></audio>
+                            <div class="navigation">
+                                <button id="prev1" class="action-btn prev-btn">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                                <button id="play1" class="action-btn action-btn-big play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="next1" class="action-btn next-btn">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="" id="music-container2" >
-                            <audio id="audio2" class="audio2" controls>
-                                <source id="song1 audio2" src="./music/hey.mp3">
-                            </audio>
+                        <div id="music-container2" >
+                            <audio src="./music/hey.mp3" id="audio2" class="audio" controls></audio>
+                            <div class="navigation2">
+                                <button id="prev2" class="action-btn">
+                                    <i class=" fas fa-backward" id="p2"></i>
+                                </button>
+                                <button id="play2" class="action-btn action-btn-big play-btn">
+                                    <i class="fas fa-play" id="p2"></i>
+                                </button>
+                                <button id="next2" class="action-btn">
+                                    <i class="fas fa-forward" id="p2"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="navigation">
-                            <button id="prev1" class="action-btn prev-btn">
+                            <audio src="" controls></audio>
+                            <button id="prev" class="action-btn prev-btn">
                                 <i class="fas fa-backward"></i>
                             </button>
-                            <button id="play1" class="action-btn action-btn-big play-btn">
+                            <button id="play" class="action-btn action-btn-big play-btn">
                                 <i class="fas fa-play"></i>
                             </button>
-                            <button id="next1" class="action-btn next-btn">
+                            <button id="next" class="action-btn next-btn">
                                 <i class="fas fa-forward"></i>
                             </button>
                         </div>
+
+                    </div>
                 </div>
             </main>
         </div>
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
